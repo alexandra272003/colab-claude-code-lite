@@ -6,8 +6,6 @@ A mini **Claude Code–style coding agent** you can run for free in **Google Col
 
 > ✅ **Tested on Colab** with a free **Tesla T4 GPU** and **`qwen2.5:7b`** served by **Ollama**. No paid API, no Hugging Face credits.
 
-Adapted from `5.CodingAgentMVP1` in [singhsanket143/AiEngineeringConcepts](https://github.com/singhsanket143/AiEngineeringConcepts). The original uses the OpenAI API; this version swaps the model layer so it runs on free models.
-
 ## Features
 - 📝 `write_file`, `edit_file`, `read_file`, `list_files`
 - 💻 `run_command`, `list_jobs`, `stop_job` (foreground and background processes)
@@ -78,7 +76,4 @@ cd src && python main.py
 - Small open models are weaker than Claude/GPT at tool calling. Keep requests simple and expect to say "yes" when the model asks for confirmation.
 - Colab resets the runtime when idle, so Ollama and the model are reinstalled each session. Project files persist on Google Drive.
 - Commands run on the Colab VM (not a hardened sandbox). Keep approvals on (`HITL_ENABLED=true`) and read what the agent proposes before pressing `y`.
-
-## Credits
-Original project by Sanket Singh ([AiEngineeringConcepts](https://github.com/singhsanket143/AiEngineeringConcepts)). Colab/free-model adaptation: this repo. Check the original repository's license before redistributing.
 # colab-claude-code-lite
